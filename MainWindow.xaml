@@ -5,8 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:gamerpc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1000" Width="400">
     <Grid>
+        <StackPanel Margin="15">
+            <TextBlock Text="Gamer PC rendelő" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="10"/>
 
+            <TextBlock Text="Név:" FontSize="16" Margin="0,10,0,2" FontWeight="Bold"/>
+            <TextBox x:Name="Name" FontSize="16" />
+
+            <TextBlock Text="Életkor:" FontSize="16" Margin="0,10,0,2" FontWeight="Bold"/>
+            <TextBox x:Name="Age" FontSize="16" />
+
+            <TextBlock Text="Email:" FontSize="16" Margin="0,10,0,2" FontWeight="Bold"/>
+            <TextBox x:Name="Email" FontSize="16"/>
+
+            <TextBlock Text="Processzor:" FontSize="16" Margin="0,20,0,0" FontWeight="Bold"/>
+            <ComboBox x:Name="Processor" FontSize="16" Margin="0,2,0,0">
+                <ComboBoxItem Content="Intel Core i5 - 70 000Ft" />
+                <ComboBoxItem Content="Intel Core i7 - 110 000Ft" />
+                <ComboBoxItem Content="AMD Ryzen 5 - 65 000Ft" />
+                <ComboBoxItem Content="AMD Ryzen 7 - 105 000Ft" />
+            </ComboBox>
+
+            <TextBlock Text="Videókártya:" FontSize="16" Margin="0,20,0,0" FontWeight="Bold"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="GPU1" Content="NVIDIA GeForce RTX 4060 - 130 000Ft" FontSize="16" Margin="0,2,0,0" GroupName="videokartya"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="GPU2" Content="NVIDIA GeForce RTX 4070 - 220 000Ft" FontSize="16" Margin="0,5,0,0" GroupName="videokartya"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="GPU3" Content="NVIDIA GeForce RTX 4080 - 400 000Ft" FontSize="16" Margin="0,5,0,0" GroupName="videokartya"/>
+
+
+            <TextBlock Text="Memória:" FontSize="16" Margin="0,20,0,0" FontWeight="Bold"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="RAM1" Content="16 GB - 20 000Ft" FontSize="16" Margin="0,2,0,0" GroupName="memoria"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="RAM2" Content="32 GB - 35 000Ft" FontSize="16" Margin="0,5,0,0" GroupName="memoria"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="RAM3" Content="64 GB - 65 000Ft" FontSize="16" Margin="0,5,0,0" GroupName="memoria"/>
+
+
+            <TextBlock Text="Darabszám:" FontSize="16" Margin="0,20,0,2" FontWeight="Bold"/>
+            <TextBox x:Name="Darab" FontSize="16"/>
+
+
+            <TextBlock Text="Extrák:" FontSize="16" Margin="0,10,0,2" FontWeight="Bold"/>
+            <CheckBox  VerticalContentAlignment="Center" x:Name="Extra1" Content="RGB világítás - +15 000Ft" FontSize="16" Margin="0,2,0,0"/>
+            <CheckBox  VerticalContentAlignment="Center" x:Name="Extra2" Content="Windows 11 - +45 000Ft" FontSize="16" Margin="0,2,0,0"/>
+            <CheckBox  VerticalContentAlignment="Center" x:Name="Extra3" Content="Gamer billentyűzet- +25 000Ft" FontSize="16" Margin="0,2,0,0"/>
+            <CheckBox  VerticalContentAlignment="Center" x:Name="Extra4" Content="Gamer egér - +18 000Ft" FontSize="16" Margin="0,2,0,0"/>
+
+            
+            <TextBlock Text="Garancia:" FontSize="16" Margin="0,20,0,0" FontWeight="Bold"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="Gari1" Content="Alap 1 év - ingyenes" FontSize="16" Margin="0,2,0,0" GroupName="garancia" IsChecked="True"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="Gari2" Content="3 év garancia - +30 000Ft" FontSize="16" Margin="0,5,0,0" GroupName="garancia"/>
+            <RadioButton VerticalContentAlignment="Center" x:Name="Gari3" Content="5 év garancia - +60 000Ft" FontSize="16" Margin="0,5,0,0" GroupName="garancia"/>
+
+
+            <CheckBox VerticalContentAlignment="Center" x:Name="Feltetel" Content="Elfogadom a vásárlási feltételeket" FontSize="12" Margin="0,20,0,0"/>
+
+            <Button Height="35" BorderThickness="0" Background="ForestGreen" x:Name="RendelesLeadasa" Content="Rendelés leadása" FontSize="16" Margin="0,20,0,0" Click="Rendeles"/>
+        </StackPanel>
     </Grid>
 </Window>
